@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="bodytext">
+      call me<br />
+      Telephone: click my no.<br />
+      
+    </p>
+    <a
+      href="tel:+918606609429"
+      onclick="javascript:_gaq.push(['_trackEvent', 'Mobile', 'URL', 'Call']);"
+      target="_blank"
+      title="call me"
+      >+918606609429</a
+    >
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        $(function(){
+            $("span, p").each(function() {
+                var phonelink = '<a href="tel:+918606609429" onclick="' + "javascript:_gaq.push(['_trackEvent', 'Mobile', '" + document.URL + "', 'call']);" + '" target="_blank" title="call me">+49(0)1234/567890</a>';
+                var text = $(this).text();
+                text = text.replace("+918606609429", phonelink);
+                $(this).text(text);
+            });
+        });
+        /* ]]> */
+    </script>
+  </body>
+</html>
